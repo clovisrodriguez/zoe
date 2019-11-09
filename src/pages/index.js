@@ -1,10 +1,17 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Amplify, { graphqlOperation } from "aws-amplify"
+import { Connect } from "aws-amplify-react"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+
+import amplify from '../aws-exports';
+import * as queries from "../graphql/queries"
+
+Amplify.configure(amplify)
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,6 +22,12 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
+        <Connect query={graphqlOperation(queries.listProducts)}>
+          {(res) => {
+            console.log(res);
+            return <h3>just right</h3>
+          }}
+        </Connect>
         <Bio />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug

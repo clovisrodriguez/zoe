@@ -1,0 +1,19 @@
+{
+	"prod": {
+		"awscloudformation": {
+			"AuthRoleName": "zoe-prod-20191107165914-authRole",
+			"UnauthRoleArn": "arn:aws:iam::036917629170:role/zoe-prod-20191107165914-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::036917629170:role/zoe-prod-20191107165914-authRole",
+			"Region": "us-east-2",
+			"DeploymentBucketName": "zoe-prod-20191107165914-deployment",
+			"UnauthRoleName": "zoe-prod-20191107165914-unauthRole",
+			"StackName": "zoe-prod-20191107165914",
+			"StackId": "arn:aws:cloudformation:us-east-2:036917629170:stack/zoe-prod-20191107165914/df4f7a10-01a9-11ea-934e-021e2396e2cc"
+		},
+		"categories": {
+			"auth": {
+				"zoe7cac1b4d": {}
+			}
+		}
+	}
+}

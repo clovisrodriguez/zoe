@@ -1,0 +1,19 @@
+type Product @model {
+  id: ID!
+  title: String!
+  price: Int!
+  description: String
+  category: Category
+  images: [String]
+}
+
+type MetaData @model {
+  mainBanner: [String]
+}
+
+enum Category {
+  mobiliary
+  capilar
+  electric
+  accesories
+}
